@@ -12,7 +12,7 @@ export default function MainLayout({ children, ...props }: Props) {
             <div className='h-full'>
                 {children}
             </div>
-            <footer className='flex items-center justify-center text-sm'>
+            <footer className='flex items-center justify-center text-sm py-3'>
                 &copy;2025 - Untung Budiman
             </footer>
         </div>
