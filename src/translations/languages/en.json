@@ -1,0 +1,13 @@
+{
+    "languages": {
+        "indo":"Indonesian",
+        "eng" : "English"
+    },
+    "menu": {
+        "home":"Home",
+        "about":"About",
+        "skills":"Skills",
+        "portofolio":"Portofolio",
+        "contact":"Contact"
+    }
+}
