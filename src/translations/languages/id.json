@@ -1,0 +1,13 @@
+{
+    "languages": {
+        "indo":"Indonesia",
+        "eng" : "Inggris"
+    },
+    "menu": {
+        "home": "Beranda",
+        "about": "Tentang",
+        "skills": "Keahlian",
+        "portofolio": "Portofolio",
+        "contact": "Kontak"
+    }
+}
