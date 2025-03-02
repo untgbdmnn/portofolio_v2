@@ -1,6 +1,6 @@
 
 import ButtonTheme from "@/components/ButtonTheme";
-import SelectLang, { SelectLangMobile } from "@/components/SelectLang";
+import { SelectLangMobile } from "@/components/SelectLang";
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
 import { AiOutlineCloseCircle } from "react-icons/ai";
