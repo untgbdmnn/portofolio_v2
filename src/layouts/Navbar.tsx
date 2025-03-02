@@ -19,8 +19,8 @@ export default function Navbar() {
     { name: 'contact', link: '/contact' },
   ]
   return (
-    <div className='w-full py-2'>
-      <div className='bg-background py-2 rounded-sm px-5'>
+    <div className='w-full fixed z-[9999]'>
+      <div className='backdrop-blur-md py-2 rounded-sm px-5'>
         <div className='flex items-center justify-between @container'>
           <Link to="/" className='text-lg font-black logo flex items-center justify-center'>Untung Budiman</Link>
           <div className='flex items-center @sm:hidden @md:hidden @xs:hidden @xl:flex'>

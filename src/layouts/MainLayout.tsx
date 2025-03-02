@@ -7,12 +7,14 @@ type Props = {
 
 export default function MainLayout({ children, ...props }: Props) {
     return (
-        <div {...props} className='min-h-screen h-full w-full flex items-center justify-between flex-col'>
-            <Navbar />
-            <div className='h-full'>
-                {children}
+        <div {...props} className='min-h-screen h-full w-full flex flex-col'>
+            <div className='h-full w-full'>
+                <Navbar />
+                <div className='h-full lg:py-20 py-32'>
+                    {children}
+                </div>
             </div>
-            <footer className='flex items-center justify-center text-sm py-3'>
+            <footer className='flex items-center justify-center text-sm py-3 fixed w-full bottom-0'>
                 &copy;2025 - Untung Budiman
             </footer>
         </div>

@@ -23,7 +23,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
   ]
 
   return (
-    <div className={`absolute z-[9999] inset-0 flex flex-col h-screen justify-between lg:hidden sm:hidden bg-background transition-transform duration-500 ease-in-out ${isOpen ? "translate-x-0" : "-translate-x-[30rem]"}`}>
+    <div className={`absolute z-[9999] inset-0 flex flex-col h-screen justify-between lg:hidden sm:hidden bg-background transition-transform duration-700 ease-in-out ${isOpen ? "translate-x-0" : "-translate-x-[30rem]"}`}>
       <div className='p-5'>
 
         <div className="flex items-center justify-end">
