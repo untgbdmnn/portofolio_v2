@@ -1,4 +1,3 @@
-import ButtonTheme from '@/components/ButtonTheme'
 import SelectLang from '@/components/SelectLang'
 import { Button } from '@/components/ui/button';
 import { useTranslation } from 'react-i18next'
@@ -6,6 +5,9 @@ import { Link, NavLink } from 'react-router'
 import { HiOutlineMenuAlt2 } from "react-icons/hi";
 import Sidebar from './Sidebar';
 import { useState } from 'react';
+import SwitchDarkMode from '@/components/SwitchTheme';
+import { ThemeAnimationType } from '@/lib/theme';
+import { useTheme } from '@/components/theme-provider';
 
 
 export default function Navbar() {
@@ -18,9 +20,18 @@ export default function Navbar() {
     { name: 'portofolio', link: '/portofolio' },
     { name: 'contact', link: '/contact' },
   ]
+
+  const { theme } = useTheme();
+
+  const [isDarkMode, setIsDarkMode] = useState(theme === 'dark')
+
+  const handleDarkModeChange = (isDark: boolean) => {
+    setIsDarkMode(isDark)
+  }
+
   return (
-    <div className='w-full py-2'>
-      <div className='bg-background py-2 rounded-sm px-5'>
+    <div className='w-full fixed z-[9999]'>
+      <div className='backdrop-blur-md py-2 rounded-sm px-5'>
         <div className='flex items-center justify-between @container'>
           <Link to="/" className='text-lg font-black logo flex items-center justify-center'>Untung Budiman</Link>
           <div className='flex items-center @sm:hidden @md:hidden @xs:hidden @xl:flex'>
@@ -32,7 +43,12 @@ export default function Navbar() {
           </div>
           <div className='flex items-center justify-center gap-1 @sm:hidden @md:hidden @xs:hidden @xl:flex'>
             <SelectLang />
-            <ButtonTheme className='cursor-pointer' />
+            <SwitchDarkMode
+              animationType={ThemeAnimationType.CIRCLE}
+              styleId="circle-animation"
+              isDarkMode={isDarkMode}
+              onDarkModeChange={handleDarkModeChange}
+            />
           </div>
 
           <div className='@xl:hidden @md:hidden @sm:block @xs:block'>
