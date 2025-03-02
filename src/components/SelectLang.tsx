@@ -4,7 +4,7 @@ import IDFlags from '../assets/icons/id.png'
 import USFlags from '../assets/icons/us.png'
 
 export default function SelectLang() {
-    const { t, i18n } = useTranslation();
+    const { i18n } = useTranslation();
     return (
         <Select onValueChange={(value) => i18n.changeLanguage(value)} defaultValue={i18n.language}>
             <SelectTrigger className="w-[90px] ring-0 outline-none">
