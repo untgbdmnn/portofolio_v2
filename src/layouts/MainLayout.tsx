@@ -14,7 +14,7 @@ export default function MainLayout({ children, ...props }: Props) {
                     {children}
                 </div>
             </div>
-            <footer className='flex items-center justify-center text-sm py-3 fixed w-full bottom-0'>
+            <footer className='flex items-center justify-center text-sm py-3 fixed w-full bottom-0 bg-background'>
                 &copy;2025 - Untung Budiman
             </footer>
         </div>
