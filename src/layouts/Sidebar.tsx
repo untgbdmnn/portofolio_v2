@@ -1,5 +1,4 @@
 
-import ButtonTheme from "@/components/ButtonTheme";
 import { SelectLangMobile } from "@/components/SelectLang";
 import SwitchDarkMode from "@/components/SwitchTheme";
 import { useTheme } from "@/components/theme-provider";
