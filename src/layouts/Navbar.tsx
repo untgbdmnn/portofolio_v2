@@ -16,7 +16,6 @@ export default function Navbar() {
   const menuItem = [
     { name: 'home', link: '/' },
     { name: 'about', link: '/about' },
-    { name: 'skills', link: '/skills' },
     { name: 'portofolio', link: '/portofolio' },
     { name: 'contact', link: '/contact' },
   ]

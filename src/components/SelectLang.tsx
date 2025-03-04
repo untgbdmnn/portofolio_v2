@@ -40,7 +40,7 @@ export function SelectLangMobile() {
                     )}
                 </div>
             </SelectTrigger>
-            <SelectContent className='w-fit'>
+            <SelectContent className='w-fit absolute z-[9999]'>
                 <SelectItem value="id" className='text-2xl'>{t('languages.indo')}</SelectItem>
                 <SelectItem value="en" className='text-2xl'>{t('languages.eng')}</SelectItem>
             </SelectContent>

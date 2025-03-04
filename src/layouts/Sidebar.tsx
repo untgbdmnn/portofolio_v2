@@ -1,7 +1,11 @@
 
 import ButtonTheme from "@/components/ButtonTheme";
 import { SelectLangMobile } from "@/components/SelectLang";
+import SwitchDarkMode from "@/components/SwitchTheme";
+import { useTheme } from "@/components/theme-provider";
 import { Button } from "@/components/ui/button";
+import { ThemeAnimationType } from "@/lib/theme";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import { NavLink } from "react-router";
@@ -17,10 +21,16 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
   const menuItem = [
     { name: 'home', link: '/' },
     { name: 'about', link: '/about' },
-    { name: 'skills', link: '/skills' },
     { name: 'portofolio', link: '/portofolio' },
     { name: 'contact', link: '/contact' },
   ]
+
+  const { theme } = useTheme();
+  const [isDarkMode, setIsDarkMode] = useState(theme === 'dark')
+
+  const handleDarkModeChange = (isDark: boolean) => {
+    setIsDarkMode(isDark)
+  }
 
   return (
     <div className={`absolute z-[9999] inset-0 flex flex-col h-screen justify-between lg:hidden sm:hidden bg-background transition-transform duration-700 ease-in-out ${isOpen ? "translate-x-0" : "-translate-x-[30rem]"}`}>
@@ -42,7 +52,13 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
           </div>
 
           <div className="pl-3 flex items-center gap-2">
-            <ButtonTheme className="size-16" styleIcon="size-10" />
+            {/* <ButtonTheme className="size-16" styleIcon="size-10" /> */}
+            <SwitchDarkMode className="size-16" styleIcon="size-10"
+              animationType={ThemeAnimationType.CIRCLE}
+              styleId="circle-animation"
+              isDarkMode={isDarkMode}
+              onDarkModeChange={handleDarkModeChange}
+            />
             <SelectLangMobile />
           </div>
 
